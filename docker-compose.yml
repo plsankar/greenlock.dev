@@ -1,0 +1,12 @@
+# /greenlock/docker-compose.yml
+---
+version: "3.3"
+services:
+    php:
+        container_name: "greenlock-php"
+        build: ./
+        image: greenlock-php-image
+        ports:
+            - "80:80"
+        volumes:
+            - "./:/var/www/html"

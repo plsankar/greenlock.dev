@@ -1,0 +1,21 @@
+{
+    "name": "greenlock",
+    "dockerComposeFile": [
+        "../docker-compose.yml"
+    ],
+    "service": "php",
+    "workspaceFolder": "/var/www/html",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "JustPlayer.justins-php-pack",
+                "bmewburn.vscode-intelephense-client",
+                "zobo.php-intellisense",
+                "shevaua.phpcs",
+                "ms-azuretools.vscode-docker",
+                "esbenp.prettier-vscode",
+                "valeryanm.vscode-phpsab"
+            ]
+        }
+    }
+}
