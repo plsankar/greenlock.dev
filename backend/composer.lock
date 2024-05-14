@@ -4,8 +4,60 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "da9b7a1dc1dd923105198c572cc7df8d",
+    "content-hash": "6e1f65fad321bcd95a0c588d06e3fc83",
     "packages": [
+        {
+            "name": "afosto/yaac",
+            "version": "v1.5.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/afosto/yaac.git",
+                "reference": "3c09d1a8ae7df6ba0ec23c9ccf641b3295219de7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/afosto/yaac/zipball/3c09d1a8ae7df6ba0ec23c9ccf641b3295219de7",
+                "reference": "3c09d1a8ae7df6ba0ec23c9ccf641b3295219de7",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "ext-openssl": "*",
+                "guzzlehttp/guzzle": "^6.3|^7.0",
+                "league/flysystem": "^1.0|^3.0"
+            },
+            "type": "package",
+            "autoload": {
+                "psr-4": {
+                    "Afosto\\Acme\\": "./src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Afosto Team",
+                    "homepage": "https://afosto.com"
+                }
+            ],
+            "description": "Yet Another ACME client: a decoupled LetsEncrypt client",
+            "homepage": "https://afosto.com",
+            "keywords": [
+                "ACME",
+                "acmev2",
+                "afosto",
+                "encrypt",
+                "lets",
+                "v2"
+            ],
+            "support": {
+                "issues": "https://github.com/afosto/yaac/issues",
+                "source": "https://github.com/afosto/yaac/tree/v1.5.2"
+            },
+            "time": "2023-05-02T15:11:17+00:00"
+        },
         {
             "name": "brick/math",
             "version": "0.12.1",
