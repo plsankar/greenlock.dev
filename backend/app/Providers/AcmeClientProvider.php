@@ -19,7 +19,7 @@ class AcmeClientProvider extends ServiceProvider
 
             $email = $params[0];
 
-            $adapter = new LocalFilesystemAdapter(base_path() . '/ssldump');
+            $adapter = new LocalFilesystemAdapter(base_path() . '/data/ssl-certs/');
             $filesystem = new Filesystem($adapter);
 
             $client = new Client([
