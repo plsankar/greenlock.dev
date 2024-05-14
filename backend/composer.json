@@ -8,6 +8,7 @@
         "php": "^8.2",
         "afosto/yaac": "^1.5",
         "laravel/framework": "^11.0",
+        "laravel/sanctum": "^4.0",
         "laravel/tinker": "^2.9",
         "league/flysystem": "^3.0"
     },
