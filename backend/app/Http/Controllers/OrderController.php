@@ -3,12 +3,11 @@
 namespace App\Http\Controllers;
 
 use Afosto\Acme\Client;
-use App\Http\Requests\OrderGenerateRequest;
-use Illuminate\Http\Request;
+use App\Http\Requests\AcmeOrderGenerateRequest;
 
-class OrderController extends Controller
+class AcmeOrderController extends Controller
 {
-    public function create(OrderGenerateRequest $request)
+    public function create(AcmeOrderGenerateRequest $request)
     {
         $values = $request->validated();
 
