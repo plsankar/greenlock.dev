@@ -14,7 +14,7 @@ class AcmeOrderController extends Controller
         /**
          * @var \Afosto\Acme\Client
          */
-        $client = app(Client::class, [$values['email']]);
+        $client = app(Client::class, ['email' => $values['email']]);
 
         /**
          * @var \Afosto\Acme\Data\Order

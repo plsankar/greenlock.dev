@@ -17,7 +17,7 @@ class AcmeClientProvider extends ServiceProvider
     {
         $this->app->singleton(Client::class, function (Application $app, array $params) {
 
-            $email = $params[0];
+            $email = $params['email'];
 
             $adapter = new LocalFilesystemAdapter(base_path() . '/data/ssl-certs/');
             $filesystem = new Filesystem($adapter);
