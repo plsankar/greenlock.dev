@@ -27,7 +27,6 @@ class AcmeOrderGenerateRequest extends FormRequest
             'domains' => 'required|array',
             'domains.*' => 'string',
             'email' => 'required|email',
-            'type' => 'in:https,dns',
         ];
     }
 
