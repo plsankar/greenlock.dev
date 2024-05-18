@@ -117,13 +117,19 @@ class AcmeOrderController extends Controller
                 $authorization['challenges']['dns'] = null;
             }
 
+
+            $verified = false;
+
             if ($_authorization->getHttpChallenge()) {
-                $authorization['verified'] = $client->selfTest($_authorization, Client::VALIDATION_HTTP, 1);
-            } else if ($_authorization->getDnsChallenge()) {
-                $authorization['verified'] = $client->selfTest($_authorization, Client::VALIDATION_DNS, 1);
-            } else {
-                $authorization['verified'] = false;
+                $verified = $client->selfTest($_authorization, Client::VALIDATION_HTTP, 1);
             }
+
+            if (false === $verified && $_authorization->getDnsChallenge()) {
+                $verified = $client->selfTest($_authorization, Client::VALIDATION_DNS, 1);
+            }
+
+            $authorization['verified'] =  $verified;
+
 
             array_push($authorizations, $authorization);
         }

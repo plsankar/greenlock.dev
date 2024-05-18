@@ -32,19 +32,16 @@ const OrderRequestForm = () => {
   const { setRequest, setOrder, order } = useSSLOrderStore();
 
   const mutation = useMutation({
-    mutationFn: (data: OrderFormSchemaType) => {
-      return api.post('/order', data);
+    mutationFn: (formValues: OrderFormSchemaType) => {
+      return api.post('/order', formValues);
     },
-    onSuccess(data) {
-      setRequest(form.getValues());
+    onSuccess(data, formValues) {
+      setRequest(formValues);
       setOrder(data.data);
-      console.log(data);
     },
   });
 
   function onSubmit(data: OrderFormSchemaType) {
-    setRequest(null);
-    setOrder(null);
     mutation.mutate(data);
   }
 
@@ -62,21 +59,7 @@ const OrderRequestForm = () => {
               <FormItem>
                 <FormLabel>Domains</FormLabel>
                 <FormControl>
-                  <Input
-                    placeholder="example.com,*.example.com"
-                    {...field}
-                    // onChange={(event) => {
-                    //   console.log(event);
-                    //   let _value = event.currentTarget.value.replace(/ /g, '');
-                    //   console.log(_value);
-                    //   if (isUrl(_value)) {
-                    //     let url = new URL(_value);
-                    //     field.onChange(`${url.host}`);
-                    //   } else {
-                    //     field.onChange(_value);
-                    //   }
-                    // }}
-                  />
+                  <Input placeholder="example.com,*.example.com" {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>

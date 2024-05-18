@@ -67,10 +67,9 @@ const Challenges = () => {
                           </li>
                           <li>
                             <p>
-                              {' '}
-                              2. Create a folder ".well-known" in the root folder of your domain.
+                              {`2. Create a folder ".well-known" in the root folder of your domain.
                               And inside the ".well-known" create another folder "acme-challenge".
-                              Then upload the above file(s) inside the acme-challenge folder.
+                              Then upload the above file(s) inside the acme-challenge folder.`}
                             </p>
                           </li>
                           <li>
